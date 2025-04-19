@@ -1,17 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   height: 100dvh;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .navbar {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 15px;
   display: flex;
   justify-content: center;
+  border-bottom: 2px solid #8b0000;
 }
 
 .menu {
@@ -24,14 +28,16 @@ body {
 .listMenu a,
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: #e0e0e0;
   padding: 10px 20px;
   transition: ease 0.3s;
+  font-weight: 500;
 }
 
 .listMenu a:hover {
-  background-color: #575757;
+  background-color: #2a2a2a;
   border-radius: 5px;
+  color: #8b0000;
 }
 
 .listMenu:not(:last-child) {
@@ -44,8 +50,9 @@ body {
 }
 
 #title {
-  font-family: "Martian Mono";
   text-transform: uppercase;
+  font-size: 24px;
+  color: #8b0000;
 }
 
 .imgMural {
@@ -60,13 +67,15 @@ body {
 }
 
 .formsStyle {
-  border: 2px solid #333;
+  border: 1px solid #444;
   border-radius: 10px;
   padding: 50px 100px;
+  background-color: #2b2b2b;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin: 100px;
+  margin: 80px auto;
+  max-width: 500px;
 }
 
 .formsStyle label {
@@ -77,16 +86,19 @@ body {
 
 .formsStyle input {
   width: 100%;
-  height: 20px;
+  height: 30px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
   border: none;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #8b0000;
   transition: ease 0.5s;
+  font-family: inherit;
 }
 
 .formsStyle input:focus {
   outline: none;
-  background-color: #f1f1f1;
-  border-bottom: 2px solid #333;
+  background-color: #2a2a2a;
+  border-bottom: 2px solid #ff4c4c;
 }
 
 .boxContainer {
@@ -97,20 +109,21 @@ body {
 
 #cadastrarRecado, #atualizarRecado {
   margin-top: 20px;
-  border: 1px solid #333;
+  border: 1px solid #8b0000;
   border-radius: 5px;
-  padding: 10px 20px;
-  background-color: #333;
+  padding: 10px 25px;
+  background-color: #8b0000;
   color: white;
+  transition: ease 0.3s;
 }
 
 #cadastrarRecado:hover, #atualizarRecado:hover {
-  background-color: #575757;
+  background-color: #a60000;
   cursor: pointer;
 }
 
-#cadastrarRecado:active, atualizarRecado:active {
-  background-color: #333;
+#cadastrarRecado:active, #atualizarRecado:active {
+  background-color: #8b0000;
   transform: scale(0.9);
 }
 
@@ -118,17 +131,21 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding: 20px;
 }
 
 .postItRecado {
-  border-radius: 20px;
+  background-color: #2e2e2e;
+  border: 1px solid #8b0000;
+  border-radius: 15px;
   width: 20%;
   margin: 20px;
-  text-align: center;
+  text-align: left;
   padding: 20px;
   min-height: 250px;
   display: flex;
   flex-direction: column;
+  color: #e0e0e0;
 }
 
 .actions {
@@ -142,7 +159,7 @@ body {
 .update,
 .delete {
   cursor: pointer;
-  margin-right: 10px;
+  margin-left: 10px;
   width: 30px;
   height: 30px;
   border: none;
@@ -150,17 +167,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: ease 0.5s;
+  transition: all 0.4s ease;
 }
 
 .delete {
-  border: 1px solid #a20000;
-  background-color: #ff4d4d;
+  background-color: #8b0000;
 }
 
 .update {
-  border: 1px solid #008e00;
-  background-color: #4dff4d;
+  background-color: #4b4b4b;
+  color: #ffffff;
 }
 
 .update i,
@@ -168,19 +184,19 @@ body {
   font-size: 16px;
 }
 
-.delete:hover,
-.update:hover {
-  transform: scale(1.1);
-  transform: rotate(360deg);
+.update:hover,
+.delete:hover {
+  transform: scale(1.1) rotate(360deg);
 }
 
-.delete:active,
-.update:active {
+.update:active,
+.delete:active {
   transform: scale(0.8);
 }
 
 .error {
-  color: red;
+  color: #ff4c4c;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
